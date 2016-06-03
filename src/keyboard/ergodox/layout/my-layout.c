@@ -30,9 +30,9 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
      _dash,         _A,         _O,      _E,      _U, _I,
     _ctrlL, _semicolon,         _Q,      _J,      _K, _X,    _parenL_kp,
      _guiL,     _altL,     _arrowD, _arrowU,       0,
-                                                  _altL,    0,
-                                              0,      0,    0,
-                                         _space,   _shiftL,  _esc,
+                                                  _altL,     0,
+                                              0,      0,     0,
+                                         _space, _shiftL, _esc,
 // right hand
          3, _6,      _7,      _8,      _9,      _0,     _equal,
  _bracketR, _F,      _G,      _C,      _R,      _L,     _slash,
@@ -173,7 +173,7 @@ NULL,
                                            NULL,   NULL, lpush2,
                                          kprrel, kprrel, kprrel,
 // right hand
-        slpunum, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+         kprrel, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
          kprrel, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
          lpush1, kprrel, kprrel, kprrel, kprrel, kprrel, s2kcap,
@@ -263,18 +263,18 @@ const void_funptr_t PROGMEM _kb_layout_release[KB_LAYERS][KB_ROWS][KB_COLUMNS] =
 NULL,
 // left hand
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
- kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,   NULL,
+ kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,   kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
- s2kcap, kprrel, kprrel, kprrel, kprrel, kprrel,  lpop1,
+ kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,  kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel,
                                                  kprrel, kprrel,
                                            NULL,   NULL, kprrel,
-                                         kprrel, kprrel, kprrel,
+                                         kprrel, s2kcap, kprrel,
 // right hand
           NULL, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
         kprrel, kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-         lpop1, kprrel, kprrel, kprrel, kprrel, kprrel, s2kcap,
+        kprrel, kprrel, kprrel, kprrel, kprrel, kprrel, s2kcap,
                         kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel,
  kprrel,   NULL,   NULL,
@@ -305,6 +305,7 @@ NULL,
 
 
 	KB_MATRIX_LAYER(  // release: layer 2: keyboard functions
+
 // unused
 NULL,
 // left hand
